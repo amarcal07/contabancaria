@@ -2,6 +2,7 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
+import conta_bancaria.model.Conta;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -20,6 +21,28 @@ public class Menu {
 		float saldo;
 		float limite;
 		float valor;
+//C1: nome do objeto / NEW CONTA: metodo construtor / PARAMETROS: dados da conta (1, 123, 1, nome)
+		Conta c1 = new Conta(1, 123, 1, "Andresa Marçal", 100000.00f);
+		//CONTA C1 : instanciando um objeto
+		
+		c1.visualizar();
+		
+		//metodo GET (pego o valor)
+		System.out.println("\nSaldo da conta: " + c1.getSaldo() + "\n");
+		
+		//metodo SET (altero o valor)
+		c1.setTitular("Andresa Marques Marçal");
+		
+		//metodovisualizar
+		c1.visualizar();
+		
+		c1.sacar(1000.0f);
+		
+		c1.visualizar();
+		
+		c1.depositar(2000.0f);
+		c1.visualizar();
+				
 		
 		while (true) {
 			
