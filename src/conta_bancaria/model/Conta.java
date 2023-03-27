@@ -9,7 +9,6 @@ public class Conta {
 	private String titular;
 	private float saldo;
 	
-	
 	//metodo construtor 
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
@@ -19,6 +18,7 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
+	 
 	//método GET (pega o valor) e SET (atualiza o valor)
 	public int getNumero() {
 		return numero;

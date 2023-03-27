@@ -3,6 +3,8 @@ package conta_bancaria;
 import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -21,32 +23,26 @@ public class Menu {
 		float saldo;
 		float limite;
 		float valor;
+		
 //C1: nome do objeto / NEW CONTA: metodo construtor / PARAMETROS: dados da conta (1, 123, 1, nome)
-		Conta c1 = new Conta(1, 123, 1, "Andresa Marçal", 100000.00f);
-		//CONTA C1 : instanciando um objeto
 		
+		ContaCorrente c1 = new ContaCorrente (1, 123, 1, "Douglas Santos", 10000.00f, 1000.00f);
 		c1.visualizar();
 		
-		//metodo GET (pego o valor)
-		System.out.println("\nSaldo da conta: " + c1.getSaldo() + "\n");
-		
-		//metodo SET (altero o valor)
-		c1.setTitular("Andresa Marques Marçal");
-		
-		//metodovisualizar
+		c1.sacar(1000);
 		c1.visualizar();
 		
-		c1.sacar(1000.0f);
-		
+		c1.depositar(2000);
 		c1.visualizar();
 		
-		c1.depositar(2000.0f);
-		c1.visualizar();
-				
+
+		ContaPoupanca c2 = new ContaPoupanca (2, 1234, 2 , "Andresa Marçal", 20000.00f, 27);
+		c2.visualizar();
+		
 		
 		while (true) {
 			
-			System.out.println(Cores.TEXT_PURPLE + Cores.ANSI_WHITE_BACKGROUND + "****************************************************");
+			System.out.println(Cores.TEXT_YELLOW+ Cores.ANSI_BLACK_BACKGROUND + "****************************************************");
 			System.out.println("                                                    ");
 			System.out.println("                DEV GIRLS BANK                      ");
 			System.out.println("                                                    ");
@@ -106,7 +102,7 @@ public class Menu {
 
 	                    // criar o objeto conta poupanca
 	                }
-	                }
+	              }
 					
 				}
 				case 2 -> {
