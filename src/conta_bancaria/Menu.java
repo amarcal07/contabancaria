@@ -28,14 +28,7 @@ public class Menu {
 		
 		ContaCorrente c1 = new ContaCorrente (1, 123, 1, "Douglas Santos", 10000.00f, 1000.00f);
 		c1.visualizar();
-		
-		c1.sacar(1000);
-		c1.visualizar();
-		
-		c1.depositar(2000);
-		c1.visualizar();
-		
-
+	
 		ContaPoupanca c2 = new ContaPoupanca (2, 1234, 2 , "Andresa Marçal", 20000.00f, 27);
 		c2.visualizar();
 		
